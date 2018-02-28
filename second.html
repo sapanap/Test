@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Learning Jquery</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		$('#username').after('<span class="error">Username is required</span>');
+		});
+		</script>
+		
+	</head>
+	<body>
+	<form>
+	<input type="text" id="username">
+	
+	<input type="submit">
+	</form>
+	</body>
+</html>

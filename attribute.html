@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript">
+
+var noofclicks=0;
+function getClick(){
+noofclicks++;
+document.getElementById("title").innerText=noofclicks;
+}
+function mouseEnter(event){
+event.target.innerText=event.target.innerText+"hover";
+}
+
+function mouseLeave(event){
+event.target.innerText=event.target.innerText.replace("hover","");
+}
+window.onload=function(){
+document.getElementById("title").addEventListener('click',getClick);
+var lis=document.getElementsByTagName("li")
+for(var i=0;i<lis.length;i++){
+var li=lis[i];
+li.addEventListener('mouseenter',mouseEnter);
+li.addEventListener('mouseleave',mouseLeave);
+}
+
+
+
+}
+
+function test1(){
+var ul=document.getElementsByTagName("ul")[0];
+var li=document.createElement("li");
+var node=document.createTextNode("Element 4");
+li.appendChild(node);
+ul.appendChild(li);
+
+}
+</script>
+</head>
+	<body>
+	
+	<h1 id="title">Title</h1>
+	
+	<p class="paragraph">Paragraph text1</p>
+	<p class="paragraph">Paragraph text 2</p>
+	
+	<input type="text">
+	
+	<ul>
+	<li>Element 1 </li>
+	<li>Element 2 </li>
+	<li>Element 3 </li>
+	</ul>
+	
+	</body>
+
+
+
+
+</html>
